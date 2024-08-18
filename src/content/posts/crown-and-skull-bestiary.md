@@ -8,7 +8,7 @@ I am in love with [Crown & Skull](https://www.runehammer.online/crown-skull-rpg)
 
 | Monster       | Found | Built | Painted |
 |---------------|-------|-------|---------|
-| Armor Titan   | - [  ] | - [  ] | - [  ] |
+| Armor Titan   | - [X] | - [  ] | - [  ] |
 | Assassin      | - [  ] | - [  ] | - [  ] |
 | Blood Fungus  | - [  ] | - [  ] | - [  ] |
 | Bog Witch     | - [  ] | - [  ] | - [  ] |
