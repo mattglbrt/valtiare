@@ -2,7 +2,7 @@ export const THEME_CONFIG: App.Locals['config'] = {
   /** blog title */
   title: "The Valtiare",
   /** your name */
-  author: "Matt Gilbert",
+  author: "Hobbinomicon",
   /** website description */
   desc: "The Hobby Blog of Matt Gilbert",
   /** your deployed domain */
@@ -23,16 +23,16 @@ export const THEME_CONFIG: App.Locals['config'] = {
     },
     {
       name: "twitter",
-      href: "#",
+      href: "https://x.co/hobbinomicon",
     },
     {
-      name: "mastodon",
-      href: "#",
+      name: "instagram",
+      href: "https://www.instagram.com/Hobbinomicon",
     }
   ],
   /** your header info */
   header: {
-    twitter: "@mattglbrt",
+    twitter: "@hobbinomicon",
   },
   /** your navigation links */
   navs: [
