@@ -28,6 +28,10 @@ export const THEME_CONFIG: App.Locals['config'] = {
     {
       name: "instagram",
       href: "https://www.instagram.com/Hobbinomicon",
+    },
+    {
+      name: "youtube",
+      href: "https://www.youtube.com/@TheHobbinomicon",
     }
   ],
   /** your header info */
