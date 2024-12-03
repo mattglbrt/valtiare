@@ -25,45 +25,22 @@ const publications: CollectionEntry<"publications">[] = (
   <Container>
     <aside data-pagefind-ignore>
       <h1 class="animate font-semibold text-black dark:text-white">
-        Astro Micro Academics 🍄
+        The Book of Valtiare 🍄
       </h1>
       <div class="space-y-16">
         <section>
           <article class="space-y-4">
             <span class="animate">
               <p>
-                Astro Micro Academics is a theme for <Link
-                  href="https://astro.build/">Astro</Link
-                > and tailored for academic users and researchers. It's built on <Link href="https://astro.build/themes/details/astro-micro/">Astro Micro</Link> and
-                <Link href="https://github.com/markhorn-dev">
-                  Mark Horn's
-                </Link> popular theme <Link
-                  href="https://astro.build/themes/details/astronano/"
-                  >Astro Nano</Link
-                >. 
+                The Book of Valtiare is my attempt at following the muse, chasing the tarot, gaining ears to hear. 
               </p>
               <p>
-                Micro Academics adds features like <span class="text-red-500">tags, and blog math support</span> and also inherits <Link href="https://pagefind.app/"
-                  >Pagefind</Link
-                > for search, <Link href="https://giscus.app">Giscus</Link> for comments,
-                from Astro Micro. See full changes this <Link
-                  href="/blog/00-academic-astro">here</Link
-                >.
+                A single place to compile all my notes, thoughts, and resources. Most importantly one that I an easily and freely share with the world.
               </p>
             </span>
             <span class="animate">
               <p>
-                Micro Academics still comes with everything great about Micro and Nano — full type
-                safety, a sitemap, an RSS feed, and Markdown + MDX support.
-                Styled with TailwindCSS and preconfigured with system, light,
-                and dark themes.
-              </p>
-              <p>
-                Visit
-                <Link href="https://github.com/jingwu2121/astro-micro-academic">
-                  Astro Micro Academics on GitHub
-                </Link>
-                to fork the repository to get started.
+                Within this site, in addition to my ramblings and notes, I will include every source document and article that I can. Most of what I am looking at should fall within the public domain. That will make this site serve as a repository of knowledge that you can easily download yourself.
               </p>
             </span>
             
@@ -71,7 +48,7 @@ const publications: CollectionEntry<"publications">[] = (
         </section>
 
         <section class="animate space-y-2 border-2 border-red-800 text-red-800 dark:border-red-400 border-dashed p-2 dark:text-red-400">
-          📢📢 Your important Information (Open for job/Recruiting students)
+          A guide on how to duplicate this site for yourself coming soon.
         </section>
 
         <section class="animate space-y-6">
@@ -92,36 +69,51 @@ const publications: CollectionEntry<"publications">[] = (
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
-              Research Interests
+              Current Endeavours
             </h2>
           </div>
           <ul class="not-prose flex flex-col gap-4">
-            <li>3D Vision</li>
-            <li>AIGC</li>
+            <li>Learning Classical Greek</li>
+            <li>Building this website</li>
           </ul>
         </section>
         
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
-              News
+              News & Recent Source Document Additions
             </h2>
           </div>
           <ul class="not-prose flex flex-col gap-4 overflow-y-auto max-h-[150px] scroll_bar">
-            <li>[06/2024]: Your News1</li>
-            <li>[06/2024]: Your <span class="text-red-600">News2</span></li>
-            <li>[06/2024]: Your <span class="text-red-600">News2</span></li>
-            <!-- <li>[06/2024]: Your <span class="text-red-600">News2</span></li>
-            <li>[06/2024]: Your <span class="text-red-600">News2</span></li> -->
+            <li>[12/2024]: Development of this website begins</li>
+            <!-- <li>[06/2024]: Your <span class="text-red-600">News2</span></li>-->
           </ul>
         </section>
 
         <section class="animate space-y-6">
           <div class="flex flex-wrap items-center justify-between gap-y-2">
             <h2 class="font-semibold text-black dark:text-white">
-              Recent research
+              Latest posts
             </h2>
-            <Link href="/publications"> See all research </Link>
+            <Link href="/blog"> See all</Link>
+          </div>
+          <ul class="not-prose flex flex-col gap-4">
+            {
+              blog.map((post) => (
+                <li>
+                  <ArrowCard entry={post} />
+                </li>
+              ))
+            }
+          </ul>
+        </section>
+
+        <section class="animate space-y-6">
+          <div class="flex flex-wrap items-center justify-between gap-y-2">
+            <h2 class="font-semibold text-black dark:text-white">
+              Recent Publications
+            </h2>
+            <Link href="/publications"> See all</Link>
           </div>
           <ul class="not-prose flex flex-col gap-4">
             {
@@ -134,23 +126,6 @@ const publications: CollectionEntry<"publications">[] = (
           </ul>
         </section>
 
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap items-center justify-between gap-y-2">
-            <h2 class="font-semibold text-black dark:text-white">
-              Latest posts
-            </h2>
-            <Link href="/blog"> See all posts </Link>
-          </div>
-          <ul class="not-prose flex flex-col gap-4">
-            {
-              blog.map((post) => (
-                <li>
-                  <ArrowCard entry={post} />
-                </li>
-              ))
-            }
-          </ul>
-        </section>
 
       </div>
     </aside>
