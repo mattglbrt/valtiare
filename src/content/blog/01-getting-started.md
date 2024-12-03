@@ -2,7 +2,7 @@
 title: "[Old] Getting started with Astro-Micro"
 description: "Hit the ground running."
 date: "2024-03-22"
-tags: ['guide', 'start']
+tags: ['guide', 'start', 'rss-feed']
 ---
 
 ---

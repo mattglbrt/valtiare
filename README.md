@@ -13,4 +13,8 @@ It is tailored for researchers.
 Update the social links in `src/components/SocialIcons.astro`, simply replace the `URL`.   
 
 
+### RSS Post
+
+Please tag the post of RSS feed with tag `"rss-feed"`, other posts are not included in the RSS. 
+
 ---
