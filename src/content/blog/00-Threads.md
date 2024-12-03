@@ -16,7 +16,7 @@ You have to build the template first, you must purify the area for the muse so t
 * Book: Cracking the first code
 * Group: Scythians
 * Book: Apollus Book Eleven
-* Tool: Loeb Classical Library
+* Tool: [Loeb Classical Library](https://www.loebclassics.com/volumes)
 * Book: Macrobius - Saturnalia
 * Book: The Orphic Hymns
 * Book: PGM in Translation
