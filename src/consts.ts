@@ -3,7 +3,7 @@ import type { Metadata, Site } from "@types";
 export const SITE: Site = {
   TITLE: "The Book of Valtiare",
   DESCRIPTION: "Following the muse.",
-  EMAIL: "valtiare@gmail.com",
+  EMAIL: "bookofvaltiare@gmail.com",
   NUM_POSTS_ON_HOMEPAGE: 10,
   NUM_PUBLICATIONS_ON_HOMEPAGE: 3,
   SITEURL: 'https://valtiare.com' // Update here to link the RSS icon to your website rss
