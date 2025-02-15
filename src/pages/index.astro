@@ -59,14 +59,20 @@ allPosts.sort((a, b) => {
   <section>
     <Wrapper variant="standard" class="py-32">
       <div class="relative pb-12">
-        <Text tag="h3" variant="display6XL" class="text-white font-display"
-          >Hobby Log</Text
-        >
+        <Text tag="h3" variant="display6XL" class="text-white font-display">
+          Hobby Log
+        </Text>
         <Divider />
       </div>
       <div class="grid grid-cols-1 gap-8 mt-12 md:grid-cols-3 gap-y-24">
-        {allPosts.slice(5, 8).map((post) => <HighlightsOne post={post} />)}
+        {allPosts
+          .filter((post) => post.data.tags && post.data.tags.includes('hobby log')) // Filter by 'hobby log' tag
+          .map((post) => (
+            <HighlightsOne key={post.id} post={post} /> // Added key for React list rendering
+          ))}
       </div>
     </Wrapper>
+    
+    
   </section>
 </BaseLayout>
