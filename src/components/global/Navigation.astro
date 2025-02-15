@@ -1,0 +1,179 @@
+---
+// Fundations
+import Logo from "@/components/global/Logo.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+// Navigation links
+const navLinks = [
+  {
+    text: "Subscribe",
+    href: "/system/overview",
+    classes: "hover:text-black duration-300",
+  },
+  {
+    text: "Viginettes",
+    href: "/blog/home-two",
+  },
+  {
+    text: "Hobby Log",
+    href: "/blog/tags/hobby%20log",
+  },
+  {
+    text: "Dramatis personae",
+    href: "/blog/tags/dramatis%20personae",
+  },
+  
+];
+---
+
+<style>
+  .overflow-hidden-no-shift {
+    overflow: hidden;
+    padding-right: calc(100vw - 100%);
+  }
+</style>
+<header>
+  <Wrapper variant="standard" class="bg-black">
+    <div class="py-1">
+      <div class="flex flex-row items-center justify-between w-full">
+        <Logo />
+        <div class="flex items-center gap-4 ml-auto">
+          <Text
+            tag="a"
+            variant="textSM"
+            class="font-light duration-300 text-white hover:text-base-400"
+            title="link to your page"
+            aria-label="your label"
+            href="/system/overview"
+          >
+            Subscribe
+          </Text>
+          
+          <div class="relative">
+            <button
+              type="button"
+              id="menuToggle"
+              id="menubutton"
+              aria-controls="menu"
+              aria-expanded="false"
+              aria-label="Toggle menu"
+              class="pl-4 text-white h-14 focus-visible:outline-none"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="transition duration-300 ease-in-out fill-white size-8 shrink-0"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path class="group-focus:hidden" d="M4 8l11 0"></path>
+                <path d="M4 16l16 0"></path>
+              </svg>
+            </button>
+
+            <div
+              id="menuContent"
+              class="fixed inset-0 transition-opacity duration-300 ease-in-out opacity-0 pointer-events-none z-9999 bg-black/50 backdrop-blur-xl"
+            >
+              <div class="relative h-full px-8 py-4">
+                <button id="closeMenu" class="flex ml-auto text-white">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="transition duration-300 ease-in-out fill-white size-8 shrink-0"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  >
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M6 6l12 12"></path>
+                    <path d="M6 18l12 -12"></path>
+                  </svg>
+                </button>
+
+                <nav role="navigation" class="flex flex-col mt-8 text-right">
+                  {
+                    navLinks.map((link) => (
+                      <Text
+                        tag="a"
+                        variant="displayXL"
+                        href={link.href}
+                        title={link.text}
+                        aria-label={link.text}
+                        class="font-thin text-white uppercase hover:text-base-200"
+                      >
+                        {link.text}
+                      </Text>
+                    ))
+                  }
+                </nav>
+                <div class="relative mt-8"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</header>
+
+<script type="module">
+  // Wait for the DOM content to fully load before executing the script
+  document.addEventListener("DOMContentLoaded", (event) => {
+    // Get references to the menu toggle button, menu content, and close button
+    const menuToggle = document.getElementById("menuToggle");
+    const menuContent = document.getElementById("menuContent");
+    const closeMenu = document.getElementById("closeMenu");
+
+    // Function to toggle the visibility of the menu
+    function toggleMenu() {
+      // Check if the menu is currently closed (based on the presence of a specific class)
+      const isOpening = menuContent.classList.contains("opacity-0");
+
+      // Toggle classes to show/hide the menu
+      menuContent.classList.toggle("opacity-0"); // Controls the opacity of the menu
+      menuContent.classList.toggle("pointer-events-none"); // Toggles pointer event handling for the menu
+      document.body.classList.toggle("overflow-hidden-no-shift"); // Toggles overflow behavior for the body element
+
+      // If the menu is opening, reset and animate its links
+      if (isOpening) {
+        setTimeout(() => resetAndAnimateLinks(), 10); // Delay to ensure animations are applied correctly
+      }
+    }
+
+    // Function to reset and apply animations to the navigation links
+    function resetAndAnimateLinks() {
+      // Select all anchor links inside the navigation
+      const navLinks = document.querySelectorAll("nav a");
+
+      // Loop through each link to reset its styles and apply animations
+      navLinks.forEach((link, index) => {
+        // Reset the opacity and position of each link to an initial state
+        link.style.opacity = "0";
+        link.style.transform = "translateY(20px)";
+        link.style.transition = "none"; // Remove any pre-existing transitions
+
+        // Apply a delayed animation to each link
+        setTimeout(() => {
+          // Set transition styles for opacity and position, with a delay based on the index
+          link.style.transition = `opacity 0.3s ease-out ${index * 0.1}s, transform 0.3s ease-out ${index * 0.1}s`;
+          link.style.opacity = "1"; // Fade the link in
+          link.style.transform = "translateY(0)"; // Move the link back to its original position
+        }, 50);
+      });
+    }
+
+    // Attach the toggleMenu function to the menu toggle button's click event
+    menuToggle.addEventListener("click", toggleMenu);
+
+    // Attach the toggleMenu function to the close button's click event
+    closeMenu.addEventListener("click", toggleMenu);
+  });
+</script>

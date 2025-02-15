@@ -1,0 +1,98 @@
+---
+// Images
+import { Image } from "astro:assets";
+import HeroImage from "@/images/hero1.jpg";
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+
+// Authors entries
+import AuthorsEntries from "@/components/authors/AuthorsEntries.astro";
+// Get all authors
+import { getCollection } from "astro:content";
+const allAuthors = await getCollection("authors");
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard">
+      <div
+        class="relative flex flex-col items-start p-8 overflow-hidden bg-black isolate lg:p-12"
+      >
+        <Image
+          src={HeroImage}
+          alt="#_"
+          width="1000"
+          height="1000"
+          class="absolute inset-0 object-cover object-top -z-10 size-full"
+        />
+        <div
+          class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/95 to-black/20"
+        >
+        </div>
+        <div
+          class="flex flex-col justify-between h-full gap-20 text-white lg:gap-50"
+        >
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <Text tag="h1" variant="textXL" class="font-light"
+              >The authors of <span class="italic text-base-200"
+                >Perspectives in Architecture</span
+              ></Text
+            >
+            <div class="lg:row-start-4 col-span-full">
+              <Text
+                tag="h3"
+                variant="displaySM"
+                class="font-light tracking-tight text-center text-white leading-12 lg:leading-10 font-display"
+                >Meet the brilliant minds behind Perspectives in Architecture.
+                Our team of architects, designers, and storytellers are
+                passionate about bringing you the best in architectural
+                insights, stories, and inspiration. From thought-provoking
+                articles to exclusive interviews, each author brings their
+                unique perspective to the world of design. Explore their
+                profiles and discover the voices shaping our blog.</Text
+              >
+            </div>
+            <div class="flex flex-col gap-8 lg:row-start-5 lg:col-start-2">
+              <Text
+                tag="h3"
+                variant="textBase"
+                class="font-light tracking-tight text-white font-display first-letter:text-3xl"
+              >
+                Our talented authors bring the beauty and history of
+                architecture to life. Each writer shares a passion for
+                celebrating the craftsmanship, innovation, and stories behind
+                iconic structures, delivering insights and inspiration to fuel
+                your love for design.
+              </Text>
+              <Text
+                tag="h3"
+                variant="textXL"
+                class="font-light tracking-tight text-white font-display "
+              >
+                From seasoned architects to preservationists and design
+                enthusiasts, our authors offer a diverse range of expertise.
+                Explore expert guides, discover in-depth features on
+                architectural masterpieces, and join us in celebrating the
+                timeless elegance of the built environment. Together, let’s
+                honor the creativity and vision that shape the world around us!
+              </Text>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+
+ 
+  <section>
+    <Wrapper variant="standard" class="py-12">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-12"
+      >
+        {allAuthors.map((post) => <AuthorsEntries post={post} />)}
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

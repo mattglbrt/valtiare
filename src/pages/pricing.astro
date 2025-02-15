@@ -1,0 +1,128 @@
+---
+// Images
+import { Image } from "astro:assets";
+import MembersImage from "@/images/members.jpeg";
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+// Pricing data
+export const pricingPlans = [
+  {
+    duration: "12 Months",
+    price: "$229.00",
+    description: "Subscribe and enjoy our newsletter for 12 months",
+    features: ["Unlimited Articles", "Zero Advertising", "No card required"],
+  },
+  {
+    duration: "6 Months",
+    price: "$39.00",
+    description: "Subscribe and enjoy our newsletter for 6 months",
+    features: [
+      "500 Articles a month",
+      "Little Advertising",
+      "No card required",
+    ],
+    button: {
+      text: "Subscribe ",
+      variant: "default",
+    },
+  },
+  {
+    duration: "3 Months",
+    price: "$19.00",
+    description: "Subscribe and enjoy our newsletter for 3 months",
+    features: ["100 Articles a month", "Advertising", "Card required"],
+  },
+];
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard">
+      <div
+        class="relative flex flex-col items-start p-8 overflow-hidden bg-black isolate lg:p-12"
+      >
+        <Image
+          src={MembersImage}
+          alt="#_"
+          width="1000"
+          height="1000"
+          class="absolute inset-0 object-cover object-top -z-10 size-full"
+        />
+        <div
+          class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/95 to-black/10"
+        >
+        </div>
+        <div
+          class="flex flex-col justify-between h-full gap-20 text-white lg:gap-50"
+        >
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <Text tag="h1" variant="textXL" class="font-light">Membership</Text>
+          </div>
+          <div class="lg:row-start-4 col-span-full">
+            <Text
+              tag="h3"
+              variant="displayMD"
+              class="font-light leading-9 tracking-tight text-white lg:leading-10 font-display indent-8 lg:indent-20"
+              >Get exclusive access to insights, stories, and inspiration from
+              the world of architecture. Choose a plan and start exploring today</Text
+            >
+          </div>
+        </div>
+        <div
+          class="flex flex-col mt-12 lg:col-span-2 "
+        >
+          {
+            pricingPlans.map((plan) => (
+              <div class="relative grid items-start grid-cols-1 gap-8 py-8 overflow-hidden text-white lg:grid-cols-4">
+                <Divider/>
+                <Text
+                  tag="p"
+                  variant="displayXL"
+                  class="font-light text-white capitalize font-display text-balance"
+                >
+                  {plan.price}
+                </Text>
+                <div>
+                  <Text tag="span" variant="displaySM" class="font-display ">
+                    {plan.duration}
+                  </Text>
+                  <Text
+                    tag="p"
+                    variant="textBase"
+                    class="w-2/3 mt-2 text-white"
+                  >
+                    {plan.description}
+                  </Text>
+                </div>
+                <ul
+                  class="flex flex-col gap-1 list-disc list-inside"
+                  role="list"
+                >
+                  {plan.features.map((feature) => (
+                    <li class="text-sm ">{feature}</li>
+                  ))}
+                </ul>
+                <div>
+                  <Button
+                    aria-label={plan.description}
+                    size="xl"
+                    title="link to your page"
+                    variant="default"
+                    class="flex items-center w-full           "
+                  >
+                    Subscribe
+                  </Button>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

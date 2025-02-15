@@ -1,0 +1,42 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+// Passing props
+const { frontmatter } = Astro.props;
+---
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard">
+      <div class="relative">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >{frontmatter.page}</Text
+        >
+        <Divider />
+      </div>
+    </Wrapper>
+    <Wrapper class="py-12" variant="standard">
+      <Text class="text-white">Updated on:  <time datetime={
+        new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+          year: "numeric",
+          month: "long",
+          
+        })
+      }>
+        {
+          new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            
+          })
+        }</time
+      ></Text>
+      <div class="prose-styles">
+        <slot />
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

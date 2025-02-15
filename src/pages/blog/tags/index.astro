@@ -1,0 +1,57 @@
+---
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+// // Get all posts
+import { getCollection } from "astro:content";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+const allPosts = await getCollection("posts");
+// Get all tags
+const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard" class="py-12">
+      <div class="relative pb-2">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Index</Text
+        >
+        <Divider />
+      </div>
+    </Wrapper>
+  </section>
+  <section>
+    <Wrapper variant="standard" class="pb-12">
+      <div class="flex flex-col divide-y divide-base-900">
+        {
+          tags.map((tag) => (
+            <div class="py-2">
+              <Text
+                tag="a"
+                href={`/blog/tags/${tag}`}
+                variant="textxs"
+                class="flex items-center justify-between font-light text-white capitalize duration-300 hover:text-base-400"
+              >
+                {tag}
+                <svg
+                  class="w-10"
+                  viewBox="0 0 71 15"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.996338 6.5C0.444053 6.5 -0.00366211 6.94772 -0.00366211 7.5C-0.00366211 8.05228 0.444053 8.5 0.996338 8.5V6.5ZM69.7739 8.20711C70.1645 7.81658 70.1645 7.18342 69.7739 6.79289L63.41 0.428932C63.0194 0.0384079 62.3863 0.0384079 61.9958 0.428932C61.6052 0.819456 61.6052 1.45262 61.9958 1.84315L67.6526 7.5L61.9958 13.1569C61.6052 13.5474 61.6052 14.1805 61.9958 14.5711C62.3863 14.9616 63.0194 14.9616 63.41 14.5711L69.7739 8.20711ZM0.996338 8.5H69.0668V6.5H0.996338V8.5Z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </Text>
+            </div>
+          ))
+        }
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

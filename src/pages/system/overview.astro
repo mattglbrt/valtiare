@@ -1,0 +1,139 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+const pageSections = [
+  {
+    title: "Overview",
+    columns: [
+      {
+        category: " Pages",
+        links: [
+          { text: "Home", href: "/" },
+          { text: "404", href: "/404" },
+          { text: "About", href: "/about" },
+          { text: "Subscription", href: "/pricing" },
+        ],
+      },
+      {
+        category: "Forms",
+        links: [
+          { text: "Login", href: "/forms/login" },
+          { text: "Sign up", href: "/forms/signup" },
+          { text: "Contact", href: "/forms/contact" },
+        ],
+      },
+      {
+        category: "System",
+        links: [
+          { text: "Colors", href: "/system/colors" },
+          { text: "Links", href: "/system/link" },
+          { text: "Buttons", href: "/system/buttons" },
+          { text: "Typography", href: "/system/typography" },
+        ],
+      },
+      {
+        category: "Resources",
+        links: [
+          { text: "Social", href: "https://x.com/lexingtonthemes" },
+          {
+            text: "License",
+            href: "https://lexingtonthemes.com/legal/license",
+          },
+          {
+            text: "Documentation",
+            href: "https://lexingtonthemes.com/documentation/quick-start",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    title: "Content Collections",
+    columns: [
+      {
+        category: "Blog Pages",
+        links: [
+          { text: "Blog home v1", href: "/" },
+          { text: "Blog home v2", href: "/blog/home-two" },
+          
+          { text: "Blog Post", href: "/blog/posts/1" },
+          { text: "Tag Index", href: "/blog/tags" },
+          { text: "Tag Category", href: "/blog/tags/care" },
+          { text: "RSS", href: "/rss.xml" },
+        ],
+      },
+      {
+        category: "Utility Pages",
+        links: [
+          { text: "DPA", href: "/infopages/privacy" },
+          { text: "Cookies", href: "/infopages/cookies" },
+          { text: "Terms Of Use", href: "/infopages/terms" },
+          { text: "Privacy Policy", href: "/infopages/privacy" },
+          { text: "Ethics-statement", href: "/infopages/ethics-statement" },
+        ],
+      },
+      {
+        category: "Other Pages",
+        links: [
+          { text: "Authors", href: "/authors/home" },
+          { text: "Author details", href: "/authors/1" },
+        ],
+      },
+    ],
+  },
+];
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard">
+      <div class="relative">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Overview</Text
+        >
+        <Divider />
+      </div>
+    </Wrapper>
+
+    <Wrapper variant="standard" class="py-12">
+      <div class="flex flex-col gap-12">
+        {
+          pageSections.map((section) => (
+            <div class="grid grid-cols-1 gap-6 lg:grid-cols-4 ">
+              <Text tag="h3" variant="textLG" class="text-white ">
+                {section.title}
+              </Text>
+              <div class="grid grid-cols-2 gap-12 text-sm lg:grid-cols-4 md:grid-cols-3 text-base-400 lg:col-span-3">
+                {section.columns.map((column) => (
+                  <div class="flex flex-col gap-">
+                    <Text tag="p" variant="textBase" class="text-white ">
+                      {column.category}
+                    </Text>
+                    <ul role="list" class="mt-8 space-y-1">
+                      {column.links.map((link) => (
+                        <li>
+                          <Text
+                            tag="a"
+                            variant="textSM"
+                            class="text-base-400 hover:text-white "
+                            href={link.href}
+                          >
+                            {link.text}
+                          </Text>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

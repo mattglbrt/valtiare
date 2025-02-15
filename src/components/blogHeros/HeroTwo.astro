@@ -1,0 +1,43 @@
+---
+// Images
+import { Image } from "astro:assets";
+import HeroImage from "@/images/hero1.jpg";
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+<section>
+  <Wrapper variant="standard">
+    <Image
+      src={HeroImage}
+      alt="#_"
+      width="1000"
+      height="1000"
+      class="object-cover object-top size-full h-100"
+    />
+    <div
+      class="flex flex-col justify-between h-full gap-20 mt-2 text-white lg:gap-50"
+    >
+      <div class="flex flex-col gap-12">
+        <Text tag="h1" variant="textBase" class="font-light"
+          >Perspectives in Architecture: <span class="italic text-base-200"
+            >Conversations and Creativity</span
+          ></Text
+        >
+        <div class="lg:row-start-4 col-span-full">
+          <Text
+            tag="h3"
+            variant="displaySM"
+            class="font-light tracking-tight text-white leading-12 lg:leading-10 font-display indent-8 lg:indent-48"
+            >Welcome to Perspectives in Architecture, where we explore the
+            fascinating world of design through insightful interviews with
+            architects, designers, and visionaries. Discover the stories behind
+            iconic structures, the challenges of modern design, and the
+            inspiration that drives innovation in the built environment. Join us
+            as we delve into the minds shaping the future of architecture.</Text
+          >
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</section>

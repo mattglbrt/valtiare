@@ -1,0 +1,121 @@
+---
+// Images
+import { Image } from "astro:assets";
+import HeroImage from "@/images/hero1.jpg";
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+---
+<style>
+</style>
+<section>
+  <Wrapper variant="standard">
+    <div
+      class="relative flex flex-col items-start p-8 overflow-hidden bg-black isolate lg:p-12"
+    >
+      <Image
+        src={HeroImage}
+        alt="#_"
+        width="1000"
+        height="1000"
+        class="absolute inset-0 object-cover object-top -z-10 size-full"
+      />
+      <div
+        class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/55 to-black/20"
+      >
+      </div>
+      <div
+        class="flex flex-col justify-between h-full gap-20 text-white lg:gap-50"
+      >
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+          <Text tag="h1" variant="textXL" class="font-light"
+            >The Book of Valtiare <br />
+            <span class="italic text-base-200"
+              >Explorations & Fecundity</span
+            ></Text
+          >
+          <div class="lg:row-start-4 col-span-full">
+            <Text
+              id="heroText"
+              tag="h3"
+              variant="displaySM"
+              class="font-light tracking-tight text-white leading-12 lg:leading-10 font-display indent-8 lg:indent-48 "
+              >A tale of ancient echoes and timeless whispers.</Text
+            >
+          </div>
+        </div>
+        <div class="lg:ml-auto">
+          <a
+            href="#recent"
+            class="text-white hover:text-base-400"
+          >
+            <svg
+              class="h-10 lg:h-20"
+              viewBox="0 0 15 71"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g clip-path="url(#clip0_3025_6)">
+                <path
+                  d="M8.50005 0.996094C8.50005 0.443809 8.05233 -0.00390625 7.50005 -0.00390625C6.94777 -0.00390625 6.50005 0.443809 6.50005 0.996094H8.50005ZM6.79294 69.7737C7.18347 70.1643 7.81663 70.1643 8.20716 69.7737L14.5711 63.4098C14.9616 63.0192 14.9616 62.3861 14.5711 61.9956C14.1806 61.605 13.5474 61.605 13.1569 61.9956L7.50005 67.6524L1.84315 61.9956C1.45265 61.605 0.819552 61.605 0.428952 61.9956C0.0384522 62.3861 0.0384522 63.0192 0.428952 63.4098L6.79294 69.7737ZM6.50005 0.996094L6.50005 69.0666H8.50005L8.50005 0.996094H6.50005Z"
+                  fill="currentColor"></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_3025_6">
+                  <rect
+                    width="71"
+                    height="15"
+                    fill="white"
+                    transform="matrix(0 1 -1 0 15 0)"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</section>
+<script type="module">
+// Wait for the DOM to fully load before executing the script
+document.addEventListener('DOMContentLoaded', () => {
+    // Select the element with the ID 'heroText'
+    const heroText = document.getElementById('heroText');
+    // Get the trimmed text content of the element
+    const text = heroText.textContent.trim();
+    // Clear the text content of the element
+    heroText.textContent = '';
+    // Set the initial opacity of the element to make it visible
+    heroText.style.opacity = '1';
+    // Initialize an index to keep track of the current character being revealed
+    let index = 0;
+    // Define a function to reveal text one character at a time
+    function revealText() {
+        // Check if there are more characters to reveal
+        if (index < text.length) {
+            // Get the current character
+            const char = text[index];
+            // Create a new span element for the character
+            const span = document.createElement('span');
+            // Set the character as the text content of the span
+            span.textContent = char;
+            // Start with the span's opacity set to 0 (invisible)
+            span.style.opacity = '0';
+            // Add a transition for smooth fading in
+            span.style.transition = 'opacity 0.1s ease-in-out';
+            // Append the span to the 'heroText' element
+            heroText.appendChild(span);
+            // After a short delay, make the span fully visible
+            setTimeout(() => {
+                span.style.opacity = '1';
+            }, 10);
+            // Move to the next character
+            index++;
+            // Schedule the next character reveal with a delay
+            setTimeout(revealText, 20); // Adjust speed here (lower number = faster)
+        }
+    }
+    // Start the text reveal process
+    revealText();
+});
+</script>

@@ -1,0 +1,116 @@
+---
+// Images
+import { Image } from "astro:assets";
+import ContactImage from "@/images/contact.jpeg";
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+---
+
+<section>
+  <Wrapper variant="standard">
+    <div
+      class="relative flex flex-col items-start p-8 overflow-hidden bg-black isolate lg:p-12"
+    >
+      <Image
+        src={ContactImage}
+        alt="#_"
+        width="1000"
+        height="1000"
+        class="absolute inset-0 object-cover object-top -z-10 size-full"
+      />
+      <div
+        class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/95 to-black/40"
+      >
+      </div>
+      <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+        <Text tag="h1" variant="textXL" class="font-light text-white"
+          >Have questions, feedback, or ideas to share? <span
+            class="italic text-base-200">We’d love to hear from you!</span
+          ></Text
+        >
+        <div class="col-span-2 lg:row-start-4">
+          <Text
+            tag="h3"
+            variant="displaySM"
+            class="font-light tracking-tight text-white leading-12 lg:leading-10 font-display indent-8 lg:indent-48"
+          >
+            Whether you’re reaching out to collaborate, suggest topics, or
+            simply say hello, our team is here to connect. Fill out the form
+            below, and we’ll get back to you as soon as possible. Let’s keep the
+            conversation about architecture and design alive!
+          </Text>
+        </div>
+        <form class="flex flex-col gap-2 lg:row-start-4">
+          <!-- Name Field -->
+          <div>
+            <label for="name" class="sr-only">Full Name</label>
+            <input
+              id="name"
+              type="text"
+              name="name"
+              autocomplete="name"
+              placeholder="Enter your full name"
+              required
+              class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+            />
+          </div>
+
+          <!-- Email Field -->
+          <div>
+            <label for="email-address" class="sr-only">Email address</label>
+            <input
+              id="email-address"
+              type="email"
+              name="email"
+              autocomplete="email"
+              placeholder="Enter your email"
+              required
+              class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+            />
+          </div>
+
+          <!-- Phone Field -->
+          <div>
+            <label for="phone" class="sr-only">Phone Number</label>
+            <input
+              id="phone"
+              type="tel"
+              name="phone"
+              autocomplete="tel"
+              placeholder="Enter your phone number"
+              required
+              class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+            />
+          </div>
+
+          <!-- Message Field -->
+          <div>
+            <label for="message" class="sr-only">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Enter your message"
+              rows="4"
+              required
+              class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <Button
+            type="submit"
+            size="xl"
+            variant="default"
+            class="flex items-center justify-center w-full"
+          >
+            Send message
+          </Button>
+        </form>
+      </div>
+    </div>
+  </Wrapper>
+</section>
+
+

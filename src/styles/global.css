@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+@layer components {
+  .prose-styles {
+    @apply prose-p:text-base-400 prose-hr:bg-base-500;
+    @apply prose-code:text-white;
+    @apply prose-ol:text-base-400 prose-li:text-base-400;
+    @apply prose-strong:text-white;
+    @apply prose max-w-xl pt-0 ;
+    @apply prose-pre:rounded-none ;
+    @apply prose-strong:text-white prose-headings:text-white prose-headings:font-display prose-headings:font-light;
+  }
+}
+.prose-styles a {
+color:white;
+}
+@theme {
+  /* Typography */
+  --font-sans: "Inter", sans-serif;
+  --font-display: "InterVariable", serif;
+  /* colors */
+  --color-black: #121212;
+  --color-accent-50: oklch(97.44% 0.009 134.87);
+  --color-accent-100: oklch(95.39% 0.015 132.47);
+  --color-accent-200: oklch(90.23% 0.033 133.95);
+  --color-accent-300: oklch(85.55% 0.048 133.68);
+  --color-accent-400: oklch(80.32% 0.069 133.8);
+  --color-accent-500: oklch(75.6% 0.085 133.88);
+  --color-accent-600: oklch(67.08% 0.115 134.35);
+  --color-accent-700: oklch(54.88% 0.091 134.63);
+  --color-accent-800: oklch(40.93% 0.065 134.45);
+  --color-accent-900: oklch(27.18% 0.038 134.55);
+  --color-accent-950: oklch(18.16% 0.02 135.44);
+  --color-base-50: hsl(0, 0%, 96%);
+  --color-base-100: hsl(0, 0%, 91%);
+  --color-base-200: hsl(0, 0%, 82%);
+  --color-base-300: hsl(0, 0%, 71%);
+  --color-base-400: hsl(0, 0%, 60%);
+  --color-base-500: hsl(0, 0%, 52%);
+  --color-base-600: hsl(0, 0%, 50%);
+  --color-base-700: hsl(0, 0%, 40%);
+  --color-base-800: hsl(0, 0%, 34%);
+  --color-base-900: hsl(0, 0%, 28%);
+  --color-base-950: hsl(0, 0%, 15%);
+}
+@supports (font-variation-settings: normal) {
+  /* Use variable font if supported */
+  :root {
+    font-family: InterVariable, sans-serif;
+  }
+}
+:root {
+ 
+  /* Typography */
+  font-feature-settings: "liga" 1, "calt" 1,
+    /* Contextual Alternates */ "dlig" 1, /* Discretionary Ligatures */ "ss07" 1,
+    /* fSquare punctuation */ "ss08" 1, /* Square quotes */ "zero" 1,
+    /* Slashed zero */ "tnum" 1, /* Tabular numbers */ "cv03" 1,
+    /* Open six */ "cv04" 1, /* Open nine */ "cv01" 1,
+    /* Alternate one */ "cv09", /* Flat-top three */ "cv02" 1; /* Open 4 */
+  font-family: Inter, sans-serif;
+  font-variant-numeric: tabular-nums;
+  /* Shiki code style */
+--astro-code-foreground: theme(colors.base.500); /* Light gray for text */
+--astro-code-background: theme(colors.base.950); /* Dark gray for background */
+--astro-code-token-punctuation: theme(colors.base.200); /* Subtle light gray */
+--astro-code-token-parameter: theme(colors.base.300); /* Slightly lighter gray */
+--astro-code-token-line-number: theme(colors.base.400); /* Medium gray for line numbers */
+--astro-code-token-comment: theme(colors.base.400); /* Muted gray for comments */
+--astro-code-token-cdata: theme(colors.base.300); /* Same as parameter for consistency */
+--astro-code-token-constant: theme(colors.base.200); /* Slightly bright gray */
+--astro-code-token-function: theme(colors.base.100); /* Brightest gray for emphasis */
+--astro-code-token-attr-name: theme(colors.base.200); /* Attribute names in light gray */
+--astro-code-token-builtin: theme(colors.base.300); /* Subtle distinction for built-ins */
+--astro-code-token-boolean: theme(colors.base.200); /* Similar to constants */
+--astro-code-token-class-name: theme(colors.base.300); /* Mid-tone gray for class names */
+--astro-code-token-property: theme(colors.base.200); /* Same as attr-name for properties */
+--astro-code-token-selector: theme(colors.base.100); /* Light gray for selectors */
+--astro-code-token-string: theme(colors.base.300); /* Slight contrast for strings */
+--astro-code-token-string-expression: theme(colors.base.200); /* Match other text tokens */
+--astro-code-token-variable: theme(colors.base.100); /* Light gray for variables */
+--astro-code-token-keyword: theme(colors.base.200); /* Slight contrast for keywords */
+--astro-code-token-symbol: theme(colors.base.100); /* Match text for consistency */
+--astro-code-token-number: theme(colors.base.100); /* Bright gray for numbers */
+--astro-code-token-operator: theme(colors.base.200); /* Slightly lighter gray */
+--astro-code-token-deleted: theme(colors.base.400); /* Dim gray for deleted tokens */
+--astro-code-token-changed: theme(colors.base.400); /* Medium gray for changes */
+--astro-code-token-important: theme(colors.base.100); /* Brightest gray for important text */
+--astro-code-token-tag: theme(colors.base.200); /* Slightly lighter for tags */
+--astro-code-token-inserted: theme(colors.base.300); /* Mid-tone gray for inserted text */
+--astro-code-token-namespace: theme(colors.base.200); /* Consistent with tags */
+--astro-code-token-atrule: theme(colors.base.200); /* Same as namespace */
+--astro-code-token-entity: theme(colors.base.200); /* Match other identifiers */
+--astro-code-token-highlight: theme(colors.base.700); /* Slightly lighter background highlight */
+--astro-code-token-alert: theme(colors.base.100); /* Brightest gray for alerts */
+--astro-code-token-emphasis: theme(colors.base.300); /* Mid-tone for emphasis */
+--astro-code-token-focus: theme(colors.base.200); /* Bright for focused elements */
+--astro-code-token-notice: theme(colors.base.200); /* Match other noticeable elements */
+--astro-code-token-attr-value: theme(colors.base.300); /* Same as strings */
+--astro-code-token-regex: theme(colors.base.300); /* Consistent with strings */
+--astro-code-token-doctype: theme(colors.base.400); /* Muted for doctype */
+--astro-code-token-prolog: theme(colors.base.400); /* Same as comments */
+  --astro-code-token-bold: inherit;
+  --astro-code-token-italic: italic;
+  --astro-code-token-underline: underline;
+}

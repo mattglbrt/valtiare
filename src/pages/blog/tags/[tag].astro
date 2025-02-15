@@ -1,0 +1,49 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+// Tags
+import TagCategory from "@/components/blog/TagCategory.astro";
+import { getCollection } from "astro:content";
+export async function getStaticPaths() {
+  const allPosts = await getCollection("posts");
+  const uniqueTags = [
+    ...new Set(allPosts.map((post) => post.data.tags).flat()),
+  ];
+  return uniqueTags.map((tag) => {
+    const filteredPosts = allPosts.filter((post) =>
+      post.data.tags.includes(tag)
+    );
+    return {
+      params: { tag },
+      props: { posts: filteredPosts },
+    };
+  });
+}
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<BaseLayout pageTitle={tag}>
+  <section>
+    <Wrapper variant="standard" class="pt-12">
+      <div class="relative pb-2">
+        <Text tag="h3" variant="display6XL" class="text-white capitalize font-display"
+          > {tag}</Text
+        >
+        <Divider />
+      </div>
+     
+    </Wrapper>
+  </section>
+  <section>
+    <Wrapper variant="standard" class="py-12">
+      <div class="grid grid-cols-1 gap-8 mt-12 md:grid-cols-3 gap-y-24">
+        {posts.map((post) => <TagCategory post={post} />)}
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

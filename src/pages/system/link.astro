@@ -1,0 +1,61 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Link from "@/components/fundations/elements/Link.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard">
+      <div class="relative">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Links</Text
+        >
+        <Divider />
+      </div>
+    </Wrapper>
+    <Wrapper variant="standard" class="py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div class="py-4">
+          <Text tag="p" variant="textBase" class="text-white"> Default </Text>
+          <div class="flex flex-wrap items-center gap-4 mt-2">
+            <Link class="w-full" size="xs" variant="default">Default XS</Link>
+            <Link class="w-full" size="sm" variant="default">Default SM</Link>
+            <Link class="w-full" size="base" variant="default"
+              >Default Base</Link
+            >
+            <Link class="w-full" size="md" variant="default">Default MD</Link>
+            <Link class="w-full" size="lg" variant="default">Default LG</Link>
+            <Link class="w-full" size="xl" variant="default">Default XL</Link>
+          </div>
+        </div>
+        <div class="py-4">
+          <Text tag="p" variant="textBase" class="text-white"> Accent </Text>
+          <div class="flex flex-wrap items-center gap-4 mt-2">
+            <Link class="w-full" size="xs" variant="accent">Accent XS</Link>
+            <Link class="w-full" size="sm" variant="accent">Accent SM</Link>
+            <Link class="w-full" size="base" variant="accent">Accent Base</Link>
+            <Link class="w-full" size="md" variant="accent">Accent MD</Link>
+            <Link class="w-full" size="lg" variant="accent">Accent LG</Link>
+            <Link class="w-full" size="xl" variant="accent">Accent XL</Link>
+          </div>
+        </div>
+        <div class="py-4">
+          <Text tag="p" variant="textBase" class="text-white"> Muted </Text>
+          <div class="flex flex-wrap items-center gap-4 mt-2">
+            <Link class="w-full" size="xs" variant="muted">Muted XS</Link>
+            <Link class="w-full" size="sm" variant="muted">Muted SM</Link>
+            <Link class="w-full" size="base" variant="muted">Muted Base</Link>
+            <Link class="w-full" size="md" variant="muted">Muted MD</Link>
+            <Link class="w-full" size="lg" variant="muted">Muted LG</Link>
+            <Link class="w-full" size="xl" variant="muted">Muted XL</Link>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

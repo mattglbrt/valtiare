@@ -1,0 +1,125 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard">
+      <div class="relative">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Colors</Text
+        >
+        <Divider />
+      </div>
+    </Wrapper>
+    <Wrapper variant="standard" class="py-12">
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 text-base-400">
+        <div class="flex flex-col gap-2">
+          <Text tag="h3" variant="textBase" class="font-medium text-white"
+            >Base</Text
+          >
+          <div class="flex flex-col gap-4 mt-12">
+            <div class="p-6 bg-white -base-100"></div>
+            <span class="text-sm text-base-500">White </span>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="p-6 bg-black ring ring-base-900"></div>
+            <span class="text-sm text-base-500">Black </span>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <Text tag="h3" variant="textBase" class="font-medium text-white"
+            >Accent</Text
+          >
+         
+        <div class="flex flex-col gap-4 mt-12">
+          <div class="p-6 bg-accent-50 ">
+          </div>
+          <span class="text-sm text-base-500">Accent 50 </span>
+        </div>
+        <div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-100"></div>
+          <span class="text-sm text-base-500">Accent 100 </span>
+        </div>
+
+        <div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-200"></div>
+          <span class="text-sm text-base-500">Accent 200 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-300"></div>
+          <span class="text-sm text-base-500">Accent 300 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-400"></div>
+          <span class="text-sm text-base-500">Accent 400 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-500"></div>
+          <span class="text-sm text-base-500">Accent 500 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-600"></div>
+          <span class="text-sm text-base-500">Accent 600 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-700"></div>
+          <span class="text-sm text-base-500">Accent 700 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-800"></div>
+          <span class="text-sm text-base-500">Accent 800 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-900"></div>
+          <span class="text-sm text-base-500">Accent 900 </span>
+        </div><div class="flex flex-col gap-4">
+          <div class="p-6 bg-accent-950"></div>
+          <span class="text-sm text-base-500">Accent 950 </span>
+        </div>
+        </div>
+         <div class="flex flex-col gap-2">
+          <Text tag="h3" variant="textBase" class="font-medium text-white"
+            >Base</Text
+          >
+          <div class="flex flex-col gap-4 mt-12">
+            <div class="p-6 bg-base-50">
+            </div>
+            <span class="text-sm text-base-500">Accent 50 </span>
+          </div>
+          <div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-100"></div>
+            <span class="text-sm text-base-500">Accent 100 </span>
+          </div>
+
+          <div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-200"></div>
+            <span class="text-sm text-base-500">Base 200 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-300"></div>
+            <span class="text-sm text-base-500">Base 300 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-400"></div>
+            <span class="text-sm text-base-500">Base 400 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-500"></div>
+            <span class="text-sm text-base-500">Base 500 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-600"></div>
+            <span class="text-sm text-base-500">Base 600 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-700"></div>
+            <span class="text-sm text-base-500">Base 700 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-800"></div>
+            <span class="text-sm text-base-500">Base 800 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-900"></div>
+            <span class="text-sm text-base-500">Base 900 </span>
+          </div><div class="flex flex-col gap-4">
+            <div class="p-6 bg-base-950"></div>
+            <span class="text-sm text-base-500">Base 950 </span>
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

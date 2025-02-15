@@ -1,0 +1,72 @@
+---
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Link from "@/components/fundations/elements/Link.astro";
+// Subscirbe form
+import Subscribe from "@/components/forms/Subscribe.astro";
+// Blog entries
+import EntriesOne from "@/components/blog/EntriesOne.astro";
+import HighlightsOne from "@/components/blog/HighlightsOne.astro";
+// Components
+import HeroOne from "@/components/blogHeros/HeroOne.astro";
+import Divider from "@/components/assets/Divider.astro";
+// Get all posts
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime(); // Convert to timestamp
+  const dateB = new Date(b.data.pubDate).getTime(); // Convert to timestamp
+  return dateB - dateA; // Compare timestamps
+});
+---
+<BaseLayout>
+  <HeroOne />
+  <section class="overflow-x-hidden bg-black scroll-mt-12" id="recent">
+    <Wrapper class="variant" class="pt-32 pb-12">
+      <div class="relative pb-2">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Viginettes</Text
+        >
+        <Divider />
+      </div>
+    </Wrapper>
+    <div class="w-full pb-32 mx-auto lg:pl-8 max-w-screen 2xl:max-w-400">
+      <div id="keen-slider" class="keen-slider">
+        {allPosts.map((post) => <EntriesOne post={post} />)}
+      </div>
+    </div>
+    <!--
+    //
+    //
+    // You can use this buttons for the slider 
+    // if you want to have a navigation for the cards.
+    // 
+    <Wrapper variant="standard" class="py-8">
+      <div class="flex gap-2">
+        <button aria-label="Previous slide" id="keen-slider-previous"
+          >&larr;
+        </button>
+        <button aria-label="Next slide" id="keen-slider-next">
+          &rarr;
+        </button>
+      </div>
+    </Wrapper>
+     -->
+  </section>
+  <Subscribe />
+  <section>
+    <Wrapper variant="standard" class="py-32">
+      <div class="relative pb-12">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Hobby Log</Text
+        >
+        <Divider />
+      </div>
+      <div class="grid grid-cols-1 gap-8 mt-12 md:grid-cols-3 gap-y-24">
+        {allPosts.slice(5, 8).map((post) => <HighlightsOne post={post} />)}
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>

@@ -1,0 +1,94 @@
+---
+// Images
+import { Image } from "astro:assets";
+import SubscribeImage from "@/images/subscribe.jpg";
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+---
+
+<section>
+  <Wrapper variant="standard" class="py-32">
+    <div class="relative pb-2">
+      <Text tag="h3" variant="display6XL" class="text-white font-display"
+        >Read the Book</Text
+      >
+      <Divider />
+    </div>
+    <div
+      class="relative flex flex-col items-start p-8 mt-12 overflow-hidden bg-black isolate lg:p-12"
+    >
+      <Image
+        src={SubscribeImage}
+        alt="#_"
+        width="1000"
+        height="1000"
+        class="absolute inset-0 object-cover object-center -z-10 size-full"
+      />
+      <div
+        class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/95 to-black/20"
+      >
+      </div>
+      <div
+        class="flex flex-col justify-between h-full gap-20 text-white lg:gap-50"
+      >
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+          <Text tag="h1" variant="textXL" class="font-light">
+            Receive each new story directly to your neural processing unit. 
+          </Text>
+          <div class="lg:row-start-4 col-span-full">
+            <Text
+              tag="h3"
+              variant="displayXL"
+              class="font-light tracking-tight text-white leading-12 lg:leading-14 font-display"
+            >
+              Sign your name and receive every new transmission.
+              </Text
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="w-full mt-8 space-y-2 lg:row-start-5 col-span-full">
+      <div class="grid grid-cols-1 gap-2 sm:grid-cols-3">
+        <div>
+          <label class="sr-only undefined"> Name </label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            autocomplete="name"
+            placeholder="Enter your name"
+            aria-placeholder="Enter your name"
+            required=""
+            class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+          />
+        </div>
+        <div>
+          <label class="sr-only undefined"> Email address </label>
+          <input
+            id="email-address"
+            type="email"
+            name="email-address"
+            autocomplete="email"
+            placeholder="Enter your email"
+            aria-placeholder="Enter your email"
+            required=""
+            class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+          />
+        </div>
+        <Button
+          type="submit"
+          size="xl"
+          variant="default"
+          class="flex items-center justify-center w-full"
+        >
+          Subscribe
+        </Button>
+      </div>
+    </form>
+  </Wrapper>
+</section>

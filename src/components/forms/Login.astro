@@ -1,0 +1,112 @@
+---
+// Images
+import { Image } from "astro:assets";
+import LoginImage from "@/images/login.jpeg";
+// Fundations
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+import Button from "@/components/fundations/elements/Button.astro";
+---
+
+<section>
+  <Wrapper variant="standard">
+    <div
+      class="relative flex flex-col items-start p-8 overflow-hidden bg-black isolate lg:p-12"
+    >
+      <Image
+        src={LoginImage}
+        alt="#_"
+        width="1000"
+        height="1000"
+        class="absolute inset-0 object-cover object-top -z-10 size-full"
+      />
+      <div
+        class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/95 to-black/20"
+      >
+      </div>
+      <div
+        class="flex flex-col justify-between h-full gap-20 text-white lg:gap-30"
+      >
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+          <Text tag="h1" variant="textXL" class="font-light"
+            >Welcome back, sign in: <span class="italic text-base-200"
+              >Access your account to stay connected and up-to-date.</span
+            ></Text
+          >
+          <div class="col-span-2 lg:row-start-4">
+            <Text
+              tag="h3"
+              variant="displaySM"
+              class="font-light tracking-tight text-white leading-12 lg:leading-10 font-display indent-8 lg:indent-48"
+              >As an architecture enthusiast, this blog has been a game-changer
+              for me. The interviews, stories, and insights are not only
+              inspiring but also incredibly informative. It’s my go-to source
+              for staying connected to the world of design!.
+              <span class="block mt-2 text-right">
+                — Emily R., Architecture Student
+              </span>
+            </Text>
+          </div>
+          <form class="flex flex-col gap-2 lg:row-start-4">
+            <!-- Email Field -->
+            <div>
+              <label for="email-address" class="sr-only">Email address</label>
+              <input
+                id="email-address"
+                type="email"
+                name="email"
+                autocomplete="email"
+                placeholder="Enter your email"
+                required
+                class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+              />
+            </div>
+
+            <!-- Password Field -->
+            <div>
+              <label for="password" class="sr-only">Password</label>
+              <input
+                id="password"
+                type="password"
+                name="password"
+                autocomplete="current-password"
+                placeholder="Enter your password"
+                required
+                class="block w-full px-0 pb-8 text-sm text-white duration-300 bg-transparent border-t-0 border-b appearance-none border-base-500 h-14 border-x-0 placeholder-base-400 focus:bg-transparent focus:outline-none focus:ring-0 focus:border-white"
+              />
+            </div>
+
+            <!-- Submit Button -->
+            <Button
+              type="submit"
+              size="xl"
+              variant="default"
+              class="flex items-center justify-center w-full"
+            >
+              Sign In
+            </Button>
+          </form>
+        </div>
+
+        <div class="lg:ml-auto">
+          <a
+            href="/forms/signup"
+            class="flex items-center gap-2 text-white hover:text-base-400"
+          >
+            Don't have an account? Sign up
+            <svg
+              class="w-10"
+              viewBox="0 0 71 15"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0.996338 6.5C0.444053 6.5 -0.00366211 6.94772 -0.00366211 7.5C-0.00366211 8.05228 0.444053 8.5 0.996338 8.5V6.5ZM69.7739 8.20711C70.1645 7.81658 70.1645 7.18342 69.7739 6.79289L63.41 0.428932C63.0194 0.0384079 62.3863 0.0384079 61.9958 0.428932C61.6052 0.819456 61.6052 1.45262 61.9958 1.84315L67.6526 7.5L61.9958 13.1569C61.6052 13.5474 61.6052 14.1805 61.9958 14.5711C62.3863 14.9616 63.0194 14.9616 63.41 14.5711L69.7739 8.20711ZM0.996338 8.5H69.0668V6.5H0.996338V8.5Z"
+                fill="currentColor"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </Wrapper>
+</section>

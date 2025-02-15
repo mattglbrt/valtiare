@@ -1,0 +1,131 @@
+---
+// Assets
+import { Image } from "astro:assets";
+// Fundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
+// Components
+import Divider from "@/components/assets/Divider.astro";
+import Subscribe from "@/components/forms/Subscribe.astro";
+// Blog entries
+
+import Highlights from "@/components/blog/HighlightsOne.astro";
+// The props
+const { frontmatter } = Astro.props;
+// Get all posts
+import { getCollection } from "astro:content";
+const allPosts = await getCollection("posts");
+allPosts.sort((a, b) => {
+  const dateA = new Date(a.data.pubDate).getTime(); // Convert to timestamp
+  const dateB = new Date(b.data.pubDate).getTime(); // Convert to timestamp
+  return dateB - dateA; // Compare timestamps
+});
+---
+
+<BaseLayout>
+  <section>
+    <Wrapper variant="standard" class="relative pb-12 overflow-hidden">
+      <div
+        class="relative flex flex-col items-start p-8 overflow-hidden bg-black isolate lg:p-12"
+      >
+        <Image
+          src={frontmatter.image.url}
+          alt={frontmatter.image.alt}
+          width="1000"
+          height="1000"
+          class="absolute inset-0 object-cover object-top -z-10 size-full"
+        />
+        <div
+          class="absolute inset-0 -z-10 bg-linear-360 from-black via-black/60 to-black/90"
+        >
+        </div>
+        <div
+          class="flex flex-col justify-between h-full gap-20 text-white lg:gap-50"
+        >
+          <div class="grid grid-cols-1 gap-12 md:grid-cols-3">
+            <Text tag="h1" variant="textXL" class="font-light text-balance">
+              {frontmatter.title}</Text
+            >
+            <Text
+              tag="span"
+              variant="textXS"
+              class="uppercase text-base-400 lg:col-start-3 lg:ml-auto"
+            >
+              <time datetime={
+                new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+                  year: "numeric",
+                  month: "long",
+                  day: "2-digit",
+                })
+              }>
+                {
+                  new Date(frontmatter.pubDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "2-digit",
+                  })
+                }</time
+              >
+            </Text>
+            <div class="lg:row-start-4 col-span-full">
+              <Text
+                tag="h3"
+                variant="displayXL"
+                class="font-light tracking-tight text-white leading-12 lg:leading-14 font-display indent-8 lg:indent-48"
+              >
+                {frontmatter.description}</Text
+              >
+            </div>
+          </div>
+          <div class="flex items-center justify-between gap-4">
+            <div>
+              {
+                frontmatter.tags && frontmatter.tags.length > 0 && (
+                  <ul>
+                    {frontmatter.tags.map((tag) => (
+                      <li class="inline-block mr-2">
+                        <Text
+                          tag="a"
+                          variant="textSM"
+                          href={`/blog/tags/${tag}`}
+                          class="text-white uppercase hover:text-base-400"
+                        >
+                          {tag}
+                        </Text>
+                      </li>
+                    ))}
+                  </ul>
+                )
+              }
+            </div>
+            <Text tag="p" variant="textSM" class="uppercase text-base-400"
+              >{frontmatter.author}</Text
+            >
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+  </section>
+  <section class="">
+    <Wrapper variant="standard">
+      <div class="prose-styles">
+        <slot />
+      </div>
+    </Wrapper>
+  </section>
+  <Subscribe />
+  <section>
+    <Wrapper variant="standard" class="py-32">
+      <div class="relative pb-2">
+        <Text tag="h3" variant="display6XL" class="text-white font-display"
+          >Archives</Text
+        >
+        <Divider />
+      </div>
+      <div class="grid grid-cols-1 gap-8 mt-8 md:grid-cols-4 gap-y-24">
+        {allPosts.slice(0, 4).map((post) => <Highlights post={post} />)}
+      </div>
+    </Wrapper>
+  </section>
+</BaseLayout>
