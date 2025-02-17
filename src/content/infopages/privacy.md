@@ -2,90 +2,44 @@
 page: Privacy
 pubDate: 2025-01-19
 ---
+# Privacy Policy
 
-California Resident Notice at Collection
+_Last Updated: 2/17/2025_
 
-If you are a California resident, the California Consumer Privacy Act, as amended by the California Privacy Rights Act of 2020 (“**CCPA**”), requires us to provide some additional information to California residents. This Section only applies to you if you are a California resident, although please note that this information and the rights afforded herein are the same as offered to our other users in our main Privacy Policy. This Section does not apply to personal information we collect from our employees and job applicants in their capacity as employees and job applicants, as such information practices are described in separate policies.
+At The Book of Valtiare, we are committed to protecting your privacy and ensuring that your personal information is handled responsibly. This Privacy Policy explains what information we collect, how we use it, and the choices you have regarding your data when you visit our website or subscribe to our newsletter.
 
-The following chart details these activities:
+## 1. Information We Collect
+- **Personal Information:** When you subscribe to our newsletter, we collect your name and email address.
+- **Usage Data:** We automatically collect certain information about your interaction with our website, such as pages visited, time spent on the site, and referring URLs. This information is gathered through cookies and similar tracking technologies.
 
-**Category of personal information**
+## 2. How We Use Your Information
+- **Newsletter Delivery:** We use your personal information to send you our monthly newsletter, which may include updates, promotions, and news related to our blog.
+- **Site Improvement:** Usage data helps us analyze trends, manage the website, and improve our Services.
+- **Communication:** Your email address may be used to respond to inquiries, provide customer support, or notify you about changes to our Services.
 
-**Purposes of use**
+## 3. Sharing of Your Information
+- We do not sell or rent your personal information to third parties.
+- We may share your information with trusted third-party service providers who assist us in operating our website and managing our newsletter, under strict confidentiality agreements.
+- Your information may be disclosed if required by law or to protect our rights and the safety of our users.
 
-**Categories of Third Parties Information**
+## 4. Cookies and Tracking Technologies
+- We use cookies and other tracking technologies to enhance your user experience and collect usage data.
+- You can control cookie settings through your browser; however, disabling cookies may affect the functionality of our website.
 
-**Categories of Third Parties**
+## 5. Data Security
+- We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.
+- Despite these measures, no method of transmission over the Internet is completely secure, and we cannot guarantee absolute security.
 
-Contact information (such as your full name, phone number, email address)
+## 6. Your Rights
+- You have the right to access, update, or delete your personal information.
+- To exercise these rights or if you have any questions about your data, please contact us at [Your Email Address].
 
-Provide the Services; Communicate with you; Analyze use of and improve the services; With your consent; Comply with law or defend our legal rights; Security/fraud prevention
+## 7. Changes to This Privacy Policy
+- We may update this Privacy Policy periodically. Any changes will be posted on this page along with a new effective date.
+- Your continued use of our website or Services after any changes constitutes your acceptance of the updated Privacy Policy.
 
-Affiliated entities; Service providers; Entities for legal purposes
+## 8. Contact Us
+If you have any questions or concerns regarding this Privacy Policy, please contact us at:
+- **Email:** matt@hobbinomicon.com
 
-We do not share/sell
-
-Customer service interaction information (including optional surveys and when you ask for help)
-
-Provide the Services; Communicate with you; Analyze use of and improve the services; With your consent; Comply with law or defend our legal rights; Security/fraud prevention
-
-Affiliated entities; Service providers; Entities for legal purposes
-
-We do not share/sell
-
-Product interaction information
-
-Provide the Services; Communicate with you; Analyze use of and improve the services; With your consent; Comply with law or defend our legal rights; Security/fraud prevention
-
-Affiliated entities; Service providers; Entities for legal purposes
-
-We do not share/sell
-
-Internet network and device information (such as mobile device information, IP address, and information about your interaction with the services)
-
-Provide the Services; Analyze use of and improve the services; With your consent; Comply with law or defend our legal rights; Security/fraud prevention
-
-Affiliated entities; Service providers; Entities for legal purposes;
-
-We do not share/sell
-
-Login information (such as your username and password)
-
-Provide the Services; Comply with law or defend our legal rights; Security/fraud prevention; Comply with law or defend our legal rights
-
-Affiliated entities; Service providers; Entities for legal purposes
-
-We do not share/sell
-
-Professional or employment information (such as the name and address of the company you work for and your title)
-
-Provide the Services; Communicate with you; Analyze use of and improve the services; With your consent; Comply with law or defend our legal rights; Security/fraud prevention
-
-Affiliated entities; Service providers; Entities for legal purposes;
-
-We do not share/sell
-
-Other information (any other information you choose to provide directly to us, including optional profile photos)
-
-Provide the Services; Communicate with you; Analyze use of and improve the services; With your consent; Comply with law or defend our legal rights; Security/fraud prevention
-
-Affiliated entities; Service providers; Entities for legal purposes;
-
-We do not sell/share
-
-For more information about each category of personal information, purpose of use, and third parties to which we disclose personal information, please see the "What we collect and why," and "When we access or disclose you information" sections of our Privacy Policy.
-
-**Your Choices Regarding “Sharing” and “Selling”**: You have the right to opt out of our sale/sharing of your personal information for purposes of online analytics and advertising. Currently, we do not sell or share your data as defined by the CCPA and we have not done so over the past 12 months from the effective date of this Privacy Policy.
-
-**Other CCPA Rights.** If we ever offer any financial incentives in exchange for your personal information, we will provide you with appropriate information about such incentives.
-
-The CCPA also allows you to limit the use or disclosure of your “sensitive personal information” (as defined in the CCPA) if your sensitive personal information is used for certain purposes. Please note that we do not use or disclose sensitive personal information other than for business purposes for which you cannot opt out under the CCPA.
-
-Please see the “Your rights with respect to your information” section of our Policy above for information about the additional rights you have with respect to your personal information under California law and how to exercise them.
-
-Retention of Your Personal Information. Please see the “Retention Of Your Information” section belowof our Privacy Policy for more information.
-
-Shine the Light Disclosure
---------------------------
-
-The California "Shine the Light" law gives residents of California the right under certain circumstances to request information from us regarding the manner in which we disclose certain categories of personal information (as defined in the Shine the Light law) with third parties for their direct marketing purposes. We currently do not disclose your personal information to third parties for their own direct marketing purposes.
+_By using our website and subscribing to our newsletter, you agree to the terms outlined in this Privacy Policy._
