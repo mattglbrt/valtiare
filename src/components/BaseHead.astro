@@ -1,10 +1,12 @@
 ---
 import "../styles/global.css";
 import { AstroSeo } from "@astrolib/seo";
----
 
+// Use Astro props to pass SEO metadata
+const { title, description, canonical, openGraph } = Astro.props;
+---
 <AstroSeo
-  title="Your Page Title"
+  title="The Book of Valtiare"
   description="A detailed description of your page content."
   canonical="https://yoursite.com/current-page"
   openGraph={{
@@ -24,14 +26,18 @@ import { AstroSeo } from "@astrolib/seo";
     type: "website",
     locale: "en_US",
   }}
-  
+  twitter={{
+    handle: "@yourhandle",
+    site: "@yoursite",
+    cardType: "summary_large_image",
+  }}
 />
 
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
 <!-- Basic Meta Tags -->
-<title>Your Website Title</title>
+<title>The Book of Valtiare</title>
 <meta
   name="description"
   content="A brief description of your website content."
@@ -55,7 +61,7 @@ import { AstroSeo } from "@astrolib/seo";
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://www.yourwebsite.com/" />
+<meta property="og:url" content="https://www.valtiare.com/" />
 <meta property="og:title" content="Your Website Title" />
 <meta
   property="og:description"
@@ -63,7 +69,7 @@ import { AstroSeo } from "@astrolib/seo";
 />
 <meta
   property="og:image"
-  content="https://www.yourwebsite.com/path/to/image.jpg"
+  content="https://www.valtiare.com/path/to/image.jpg"
 />
 
 <!-- Twitter -->
