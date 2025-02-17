@@ -1,24 +1,29 @@
 ---
-// Fundations
+// Foundations
 import BaseLayout from "@/layouts/BaseLayout.astro";
 import Text from "@/components/fundations/elements/Text.astro";
 import Wrapper from "@/components/fundations/containers/Wrapper.astro";
-// Subscirbe form
+// Subscribe form
 import Subscribe from "@/components/forms/Subscribe.astro";
 // Blog entries
-import HighlightsTwo from "@/components/blog/HighlightsTwo.astro";
 import EntriesOne from "@/components/blog/EntriesOne.astro";
 // Components
 import HeroTwo from "@/components/blogHeros/HeroTwo.astro";
 import Divider from "@/components/assets/Divider.astro";
 // Get all posts
 import { getCollection } from "astro:content";
+
 const allPosts = await getCollection("posts");
-allPosts.sort((a, b) => {
-  const dateA = new Date(a.data.pubDate).getTime(); // Convert to timestamp
-  const dateB = new Date(b.data.pubDate).getTime(); // Convert to timestamp
-  return dateB - dateA; // Compare timestamps
-});
+
+// Filter to only include posts that have the "vignettes" tag,
+// then sort them by publication date (newest first)
+const vignettePosts = allPosts
+  .filter((post) => post.data.tags && post.data.tags.includes("vignettes"))
+  .sort((a, b) => {
+    const dateA = new Date(a.data.pubDate).getTime();
+    const dateB = new Date(b.data.pubDate).getTime();
+    return dateB - dateA;
+  });
 ---
 
 <BaseLayout>
@@ -26,18 +31,15 @@ allPosts.sort((a, b) => {
   <section>
     <Wrapper variant="standard" class="pt-32 pb-12">
       <div class="relative pb-2">
-        <Text tag="h3" variant="display6XL" class="text-white font-display"
-          >Viginettes</Text
-        >
+        <Text tag="h3" variant="display6XL" class="text-white font-display">
+          Vignettes
+        </Text>
         <Divider />
       </div>
-      <div
-        class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-      >
-        {allPosts.slice(2, 10).map((post) => <EntriesOne post={post} />)}
+      <div class="grid grid-cols-1 gap-4 mt-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+        {vignettePosts.map((post) => <EntriesOne post={post} />)}
       </div>
     </Wrapper>
   </section>
   <Subscribe />
-  
 </BaseLayout>
