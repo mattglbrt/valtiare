@@ -20,6 +20,14 @@ allPosts.sort((a, b) => {
   const dateB = new Date(b.data.pubDate).getTime(); // Convert to timestamp
   return dateB - dateA; // Compare timestamps
 });
+
+const vignettePosts = allPosts
+  .filter((post) => post.data.tags && post.data.tags.includes("vignettes"))
+  .sort((a, b) => {
+    const dateA = new Date(a.data.pubDate).getTime();
+    const dateB = new Date(b.data.pubDate).getTime();
+    return dateB - dateA;
+  });
 ---
 
 <BaseLayout>
@@ -35,7 +43,7 @@ allPosts.sort((a, b) => {
     </Wrapper>
     <div class="w-full pb-32 mx-auto lg:pl-8 max-w-screen 2xl:max-w-400">
       <div id="keen-slider" class="keen-slider">
-        {allPosts.map((post) => <EntriesOne post={post} />)}
+        {vignettePosts.map((post) => <EntriesOne post={post} />)}
       </div>
     </div>
     <!--

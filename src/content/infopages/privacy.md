@@ -2,8 +2,6 @@
 page: Privacy
 pubDate: 2025-01-19
 ---
-# Privacy Policy
-
 _Last Updated: 2/17/2025_
 
 At The Book of Valtiare, we are committed to protecting your privacy and ensuring that your personal information is handled responsibly. This Privacy Policy explains what information we collect, how we use it, and the choices you have regarding your data when you visit our website or subscribe to our newsletter.

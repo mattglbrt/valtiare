@@ -2,9 +2,6 @@
 page: Terms
 pubDate: 2025-01-19
 ---
-
-# Terms of Service
-
 _Last Updated: 2/17/2025_
 
 Welcome to The Book of Valtiare. These Terms of Service ("Terms") govern your use of our website, our content, and our newsletter subscription services (collectively, the "Services"). By accessing or using our Services, you agree to be bound by these Terms. If you do not agree with these Terms, please do not use our Services.

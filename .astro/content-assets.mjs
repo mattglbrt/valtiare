@@ -1,1 +1,7 @@
-export default new Map();
+
+import __ASTRO_IMAGE_IMPORT_13BHCy from "../../images/hobbylog/january/wiprhul.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md";
+import __ASTRO_IMAGE_IMPORT_J6GDv from "../../images/hobbylog/january/infinity.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md";
+import __ASTRO_IMAGE_IMPORT_Z9AzmY from "../../images/hobbylog/january/printeddwarfs.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md";
+import __ASTRO_IMAGE_IMPORT_Z1e8Fbr from "../../images/hobbylog/january/wipdod.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md";
+export default new Map([["../../images/hobbylog/january/wiprhul.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md", __ASTRO_IMAGE_IMPORT_13BHCy], ["../../images/hobbylog/january/infinity.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md", __ASTRO_IMAGE_IMPORT_J6GDv], ["../../images/hobbylog/january/printeddwarfs.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md", __ASTRO_IMAGE_IMPORT_Z9AzmY], ["../../images/hobbylog/january/wipdod.jpeg?astroContentImageFlag=&importer=src%2Fcontent%2Fposts%2Fhobbylog-jan-2025.md", __ASTRO_IMAGE_IMPORT_Z1e8Fbr]]);
+		
