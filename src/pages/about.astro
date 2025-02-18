@@ -2,7 +2,6 @@
 // Images
 import { Image } from "astro:assets";
 import Avatar1 from "@/images/avatars/1.jpeg";
-import Avatar2 from "@/images/avatars/2.jpeg";
 import AboutImage from "@/images/about.jpg";
 // Import All images you need
 import A from "@/images/about/a.jpeg";
@@ -125,18 +124,7 @@ import Wrapper from "@/components/fundations/containers/Wrapper.astro";
         </div>
 
         <div class="grid items-start grid-cols-1 gap-12 md:grid-cols-6">
-          <div
-            class="relative overflow-hidden isolate gap-80 bg-base-900 aspect-square lg:col-span-3"
-          >
-            <Image
-              src={Avatar2}
-              alt="avatr"
-              width="1000"
-              height="1000"
-              class="object-cover size-full"
-            />
-          </div>
-
+         
           <Text
             tag="p"
             variant="textBase"
