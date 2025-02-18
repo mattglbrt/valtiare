@@ -20,13 +20,13 @@ And by moved on, I mean I discovered infinity by corvus belli and have fallen in
 
 ![Infinity](../../images/hobbylog/january/infinity.jpeg)
 
-I was an assembly machine this month. I put together my entire Vanilla Combined Army Lists. I printed, built, and based an entire Chaos Dwarf Army, and I nearly completed my entire Dead of Durnharrow for MESBG. I set my self to get that done done next month and hopefully paint Aragorn and Legolas to finish the entire army project. Looking back at this month and seeing how much I accomplished from just carving out 15 minutes a day for hobbying is mind blowing. This has been my most productive hobby month in literally years in terms of painting models and building them.
+I was an assembly machine this month. I put together my entire Vanilla Combined Army Lists. I printed, built, and based an entire Chaos Dwarf Army, and I nearly completed my entire Dead of Dunharrow for MESBG. I set my self to get that done done next month and hopefully paint Aragorn and Legolas to finish the entire army project. Looking back at this month and seeing how much I accomplished from just carving out 15 minutes a day for hobbying is mind blowing. This has been my most productive hobby month in literally years in terms of painting models and building them.
 
 ![3d Printed Dwarf Army.](../../images/hobbylog/january/printeddwarfs.jpeg)
 
 This month I also realized that I have so many in progress projects that I am spinning my wheels and not actually finishing things. I am going to have to bring some organization and project management into the hobby. No way around it if I want to ever actually get all this stuff done.
 
-![Dead of Durnharrow](../../images/hobbylog/january/wipdod.jpeg)
+![Dead of Dunharrow](../../images/hobbylog/january/wipdod.jpeg)
 
 So I am setting myself some goals for February:
 ### 3d Printing
