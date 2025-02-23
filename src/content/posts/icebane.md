@@ -51,7 +51,7 @@ A breeze stirs the flames of the fire and sweeps them around Grimligg in a warmi
 "I am Arda." She turns and walks away into the night.
 
 ## The Wolf Path
-
+After clearing camp in the morning, Grimligg sets out on the narrow path though the base of the mountains.
 
 
 
