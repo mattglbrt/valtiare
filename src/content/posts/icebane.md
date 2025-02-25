@@ -59,7 +59,7 @@ With his spear now embedded in the frozen ground, he whirls, unsheathing his cur
 
 The biting cold assaults Grimligg as he summons a burst of strength to flip the wolf onto its back. Stumbling briefly to regain his footing while the remaining wolves circle menacingly, he steels himself against the frigid air.
 
-Recalling the words of Adda, he plunges into the melee in a whirlwind of blades, dispatching the final three wolves in swift succession. Feeling his strength ebb away and the freezing temperatures overwhelm him, he realizes he cannot retrieve his spear from the ice. Noticing the glint of spear tips carried by distant tundra warriors, he makes the difficult decision to abandon his weapon and press on.
+Recalling the spell of Arda, he utters the magical words and plunges into the wolves in a whirlwind of blades, dispatching the final three wolves in swift succession. Feeling his strength ebb away and the freezing temperatures overwhelm him, he realizes he cannot retrieve his spear from the ice. Noticing the glint of spear tips carried by distant tundra warriors, he makes the difficult decision to abandon his weapon and press on.
 
 
 
