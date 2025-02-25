@@ -51,7 +51,16 @@ A breeze stirs the flames of the fire and sweeps them around Grimligg in a warmi
 "I am Arda." She turns and walks away into the night.
 
 ## The Wolf Path
-After clearing camp in the morning, Grimligg sets out on the narrow path though the base of the mountains. As he enters a tight corredor, wolves approach form the north and south.
+After clearing camp in the morning, Grimligg sets out on the narrow ravine weaving though the base of mountains. 
+
+From the northern and southern passes, wolves close in. As one nears Grimligg, he deftly strikes out with his spear, impaling the wolf and driving the weapon deep into the ice below.
+
+With his spear now embedded in the frozen ground, he whirls, unsheathing his curved blade, and cleaves the next attacking wolf through the jaw. A third wolf leaps over its fallen packmate and lunges at his exposed back, yet its fangs and claws fail to breach his scale mail armor.
+
+The biting cold assaults Grimligg as he summons a burst of strength to flip the wolf onto its back. Stumbling briefly to regain his footing while the remaining wolves circle menacingly, he steels himself against the frigid air.
+
+Recalling the words of Adda, he plunges into the melee in a whirlwind of blades, dispatching the final three wolves in swift succession. Feeling his strength ebb away and the freezing temperatures overwhelm him, he realizes he cannot retrieve his spear from the ice. Noticing the glint of spear tips carried by distant tundra warriors, he makes the difficult decision to abandon his weapon and press on.
+
 
 
 
