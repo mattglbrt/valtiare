@@ -1,0 +1,25 @@
+# Node modules
+node_modules/
+
+# Local build output
+dist/
+
+# Local environment variables
+.env
+.env.*
+
+# Mac system files
+.DS_Store
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Vercel / Netlify deployments (optional)
+.vercel/
+.netlify/
+
+# Optional: VSCode settings
+.vscode/
