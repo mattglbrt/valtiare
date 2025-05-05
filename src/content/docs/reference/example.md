@@ -1,11 +1,35 @@
 ---
-title: Example Reference
-description: A reference page in my new Starlight docs site.
+title: Inspiration
+description: A list of things that I know directly infliuenced me or that I love so much probably inclued me even if I wasn't directly aware of it.
 ---
 
-Reference pages are ideal for outlining how things work in terse and clear terms.
-Less concerned with telling a story or addressing a specific use case, they should give a comprehensive outline of what you're documenting.
+A list of things that I know directly infliuenced me or that I love so much probably inclued me even if I wasn't directly aware of it.
 
-## Further reading
+## Games
 
-- Read [about reference](https://diataxis.fr/reference/) in the Diátaxis framework
+- Warhammer Fantasy
+- Mordheim
+- Frostgrave
+- Rangers of Shadowdeep
+- Crown & Skull
+- Dungeons & Dragons
+- Burning Wheel
+- Old School Essentials
+- Mageknight Rebellion
+- Warmachine
+- IK RPG - the d6 version
+- Dragonbane
+- Hyperborea
+
+
+## Books
+
+- Chronicles of Narnia
+- HP Lovecraft
+- Lord of the Rings
+- Imajica
+- Weaveworld
+- Malazan Book of the Fallen
+
+## Movies
+- Conan the Barbarian
