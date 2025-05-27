@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import InfoLayout from "../../layouts/InfoLayout.astro";
+import H1 from "../../components/h1.astro";
+
+const { tag } = Astro.params;
+const allArticles = await getCollection("articles");
+
+// Filter articles by tag
+const taggedArticles = allArticles.filter(article =>
+  article.data.tags?.includes(tag)
+);
+---
+
+<InfoLayout>
+  <H1>Articles tagged with "{tag}"</H1>
+
+  {taggedArticles.length === 0 ? (
+    <p>No articles found for this tag.</p>
+  ) : (
+    <ul class="space-y-4">
+      {taggedArticles.map(article => (
+        <li>
+          <a href={`/blog/${article.data.slug}`} class="text-red-600 font-semibold hover:underline">
+            {article.data.title}
+          </a>
+          <p class="text-sm text-gray-600">{article.data.snippet}</p>
+        </li>
+      ))}
+    </ul>
+  )}
+</InfoLayout>

@@ -10,13 +10,13 @@ const articles = defineCollection({
         slug: z.string(),
         snippet: z.string(),
         category: z.string(),
+        tags: z.array(z.string()).default([]), // 👈 Add this line
         pubDate: z.coerce.date(),
         readingDuration: z.number(),
         isDraft: z.boolean().default(false),
         updatedDate: z.coerce.date().optional(),
         author: z.string().default('Retro Rocket Team'),
         relatedArticles: z.array(reference('articles')).optional(),
-        substackUrl: z.string().url().optional(),
     }),
 });
 

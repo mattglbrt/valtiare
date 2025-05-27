@@ -39,17 +39,19 @@ const substackUrl = article.data.substackUrl || "https://substack.com/@mattglbrt
 
 <InfoLayout title={article.data.title} frontmatter={article.data}>
     <section class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-screen">
+        
         <Prose>
             <Content />
         </Prose>
 
-       <div class="mt-12 text-center text-sm text-zinc-400">
-  Did you enjoy this post?  
-  <a href="https://substack.com/@mattglbrt" target="_blank" rel="noopener noreferrer" class="text-zinc-300 underline hover:text-white hover:underline">
-    Subscribe to my Substack, Things to Tell My Kids
-  </a>.
-</div>
-
+{article.data.tags?.map(tag => (
+  <a
+    href={`/tags/${tag}`}
+    class="inline-block bg-gray-200 text-sm text-gray-700 px-2 py-1 rounded mr-2 hover:bg-gray-300"
+  >
+    #{tag}
+  </a>
+))}
         {
             relatedArticles.length > 0 && (
                 <div>
